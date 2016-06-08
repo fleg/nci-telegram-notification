@@ -1,0 +1,31 @@
+{
+  "name": "nci-telegram-notification",
+  "version": "0.0.1",
+  "description": "Telegram notification plugin for nci",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fleg/nci-telegram-notification.git"
+  },
+  "keywords": [
+    "nciplugin",
+    "telegram",
+    "notification"
+  ],
+  "author": "Aleksey Timchenko <flegmatik.bel@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fleg/nci-telegram-notification/issues"
+  },
+  "homepage": "https://github.com/fleg/nci-telegram-notification#readme",
+  "peerDependencies": {
+    "nci": "0.10.x"
+  },
+  "dependencies": {
+    "twostep": "0.4.1",
+    "underscore": "1.8.3"
+  }
+}
