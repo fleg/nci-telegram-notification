@@ -10,7 +10,8 @@ npm install nci-telegram-notification
 
 ## Usage
 
-To enable add this plugin to the `plugins` section at server config, set
+Register telegram bot, just start conversation with `@BotFather`.
+Add this plugin to the `plugins` section at server config, set
 parameters for telegram bot at `notify.telegram`
 ```yml
 plugins:
