@@ -7,6 +7,9 @@
     "test": "mocha --bail --reporter spec test.js",
     "coverage": "istanbul cover _mocha -- test.js"
   },
+  "files": [
+    "lib/index.js"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fleg/nci-telegram-notification.git"
