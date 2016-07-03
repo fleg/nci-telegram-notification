@@ -1,4 +1,5 @@
 # nci-telegram-notification
+[![Build Status](https://travis-ci.org/node-ci/nci-telegram-notification.svg?branch=master)](https://travis-ci.org/node-ci/nci-telegram-notification)
 
 Telegram notification plugin for [nci](https://github.com/node-ci/nci)
 
