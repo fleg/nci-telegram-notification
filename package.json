@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/node-ci/nci-telegram-notification#readme",
   "peerDependencies": {
-    "nci": "0.10.x || 1.0.x"
+    "nci": ">=1.0.1 <1.1.0"
   },
   "dependencies": {
     "twostep": "0.4.1",
