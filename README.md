@@ -29,8 +29,24 @@ notify:
     on: [done, change, error]
     to:
         telegram:
-            - 1111
+            - 1111 # this is id of the group chat, read next section
 ```
+
+### How to get the group chat id
+
+_Information from [stackoverflow question](https://stackoverflow.com/questions/32423837/telegram-bot-how-to-get-a-group-chat-id)_
+
+* Add the Telegram BOT to the group.
+
+* Get the list of updates for your BOT: `curl https://api.telegram.org/123:xyz/getUpdates`
+
+* Look for the "chat" object:
+```json
+{"update_id":8393,"message":{"message_id":3,"from":{"id":7474,"first_name":"AAA"},"chat":{"id":123,"title":""},"date":25497,"new_chat_participant":{"id":71,"first_name":"NAME","username":"YOUR_BOT_NAME"}}}
+```
+
+* Use the `id` of the `chat` object to send your messages.
+
 
 ## License
 
