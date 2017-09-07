@@ -16,7 +16,10 @@ var createSendParams = function(params) {
 			scm: {changes: []},
 			project: {
 				name: 'nci',
-				notify: {to: {telegram: [123]}}
+				notify: {to: {telegram: [123]}},
+				scm: {
+					rev: 'default'
+				}
 			}
 		}).extend(params)
 	};
@@ -77,7 +80,10 @@ describe('Telegram notifier', function() {
 		Steppy(
 			function() {
 				notifier.send(createSendParams({
-					project: {notify: {to: {telegram: [123]}}}
+					project: {
+						notify: {to: {telegram: [123]}},
+						scm: {rev: 'default'}
+					}
 				}), this.slot());
 			},
 			function() {
@@ -94,7 +100,10 @@ describe('Telegram notifier', function() {
 		Steppy(
 			function() {
 				notifier.send(createSendParams({
-					project: {notify: {to: {telegram: [123, 456]}}}
+					project: {
+						notify: {to: {telegram: [123, 456]}},
+						scm: {rev: 'default'}
+					}
 				}), this.slot());
 			},
 			function() {
@@ -104,6 +113,27 @@ describe('Telegram notifier', function() {
 				expect(bodies[1].chat_id).to.eql(456);
 				expect(bodies[0].text.length).to.be.above(0);
 				expect(bodies[1].text.length).to.be.above(0);
+				this.pass(null);
+			},
+			done
+		);
+	});
+
+	it('custom revision', function(done) {
+		Steppy(
+			function() {
+				notifier.send(createSendParams({
+					project: {
+						notify: {to: {telegram: [123]}},
+						scm: {rev: 'release'}
+					}
+				}), this.slot());
+			},
+			function() {
+				expect(bodies).to.have.length(1);
+				expect(bodies[0].text.length).to.be.above(0);
+				expect(bodies[0].text).to.be.contain('scm target is release')
+
 				this.pass(null);
 			},
 			done
