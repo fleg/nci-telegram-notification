@@ -29,6 +29,7 @@
     "nci": ">=1.0.1 <1.1.0"
   },
   "dependencies": {
+    "socks5-https-client": "1.2.1",
     "twostep": "0.4.1",
     "underscore": "1.8.3"
   },
