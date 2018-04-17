@@ -47,6 +47,25 @@ _Information from [stackoverflow question](https://stackoverflow.com/questions/3
 
 * Use the `id` of the `chat` object to send your messages.
 
+### Usage with SOCKS5 proxy
+
+In order to use proxy for teleram requests you can specify
+`notify.telegram.proxy` section in server config:
+
+```yml
+plugins:
+    - nci-telegram-notification
+
+notify:
+    telegram:
+        token: 123:xyz
+        proxy:
+            host: example.proxy.com
+            port: 443
+            username: proxy_username
+            password: proxy_password
+```
+
 
 ## License
 
