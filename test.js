@@ -139,4 +139,26 @@ describe('Telegram notifier', function() {
 			done
 		);
 	});
+
+	it('empty scm', function(done) {
+		Steppy(
+			function() {
+				notifier.send(createSendParams({
+					scm: null,
+					project: {
+						notify: {to: {telegram: [123]}},
+						scm: {rev: 'release'}
+					}
+				}), this.slot());
+			},
+			function() {
+				expect(bodies).to.have.length(1);
+				expect(bodies[0].text.length).to.be.above(0);
+				expect(bodies[0].text).to.be.contain('scm target is release')
+
+				this.pass(null);
+			},
+			done
+		);
+	});
 });
