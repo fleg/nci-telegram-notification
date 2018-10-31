@@ -1,6 +1,6 @@
 {
   "name": "nci-telegram-notification",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Telegram notification plugin for nci",
   "main": "lib/index.js",
   "scripts": {
