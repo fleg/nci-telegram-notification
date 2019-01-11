@@ -38,7 +38,7 @@ _Information from [stackoverflow question](https://stackoverflow.com/questions/3
 
 * Add the Telegram BOT to the group.
 
-* Get the list of updates for your BOT: `curl https://api.telegram.org/123:xyz/getUpdates`
+* Get the list of updates for your BOT: `curl https://api.telegram.org/bot123:xyz/getUpdates`
 
 * Look for the "chat" object:
 ```json
