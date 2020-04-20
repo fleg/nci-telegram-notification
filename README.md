@@ -1,7 +1,11 @@
 # nci-telegram-notification
-[![Build Status](https://travis-ci.org/node-ci/nci-telegram-notification.svg?branch=master)](https://travis-ci.org/node-ci/nci-telegram-notification)
 
 Telegram notification plugin for [nci](https://github.com/node-ci/nci)
+
+[![Npm version](https://img.shields.io/npm/v/nci-telegram-notification.svg)](https://www.npmjs.org/package/nci-telegram-notification)
+[![Build Status](https://travis-ci.org/node-ci/nci-telegram-notification.svg?branch=master)](https://travis-ci.org/node-ci/nci-telegram-notification)
+[![Known Vulnerabilities](https://snyk.io/test/npm/nci-telegram-notification/badge.svg)](https://snyk.io/test/npm/nci-telegram-notification)
+
 
 ## Installation
 
